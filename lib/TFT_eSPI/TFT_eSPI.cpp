@@ -582,7 +582,7 @@ void TFT_eSPI::initBus(void) {
     pinMode(TFT_D7, OUTPUT); digitalWrite(TFT_D7, HIGH);
   #endif
 
- // PARALLEL_INIT_TFT_DATA_BUS;
+  PARALLEL_INIT_TFT_DATA_BUS;
 
 #endif
 }
@@ -3753,7 +3753,7 @@ constexpr float LoAlphaTheshold  = 1.0/32.0;
 constexpr float HiAlphaTheshold  = 1.0 - LoAlphaTheshold;
 
 /***************************************************************************************
-** Function name:           drawPixel (alpha blended)
+** Function name:           drawPixel (aplha blended)
 ** Description:             Draw a pixel blended with the screen or bg pixel colour
 ***************************************************************************************/
 uint16_t TFT_eSPI::drawPixel(int32_t x, int32_t y, uint32_t color, uint8_t alpha, uint32_t bg_color)
@@ -3781,7 +3781,7 @@ void TFT_eSPI::fillSmoothCircle(int32_t x, int32_t y, int32_t r, uint32_t color,
   int32_t r1 = r * r;
   r++;
   int32_t r2 = r * r;
-
+  
   for (int32_t cy = r - 1; cy > 0; cy--)
   {
     int32_t dy2 = (r - cy) * (r - cy);
