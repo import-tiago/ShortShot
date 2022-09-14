@@ -292,7 +292,7 @@
 
 #define TFT_CS  PA9  // Chip select control pin (library pulls permanently low
 #define TFT_DC  PB10 // Data Command control pin - must use a pin in the range 0-31
-#define TFT_RST PB6  // Reset pin, toggles on startup
+#define TFT_RST PA10  // Reset pin, toggles on startup
 
 #define TFT_WR PC7 // Write strobe control pin - must use a pin in the range 0-31
 #define TFT_RD PA8 // Read strobe control pin
