@@ -1,4 +1,4 @@
-A ["Discussions"](https://github.com/Bodmer/TFT_eSPI/discussions) facility has been added for Q&A etc. Use the ["Issues"](https://github.com/Bodmer/TFT_eSPI/issues) tab only for problems with the library. Thanks!
+A ["Discussions"](https://github.com/import-tiago/TFT_eSPI/discussions) facility has been added for Q&A etc. Use the ["Issues"](https://github.com/import-tiago/TFT_eSPI/issues) tab only for problems with the library. Thanks!
 # News
 1. Support has been added in v2.4.70 for the RP2040 with 16 bit parallel displays. This has been tested and the screen update performance is very good (4ms to clear 320 x 480 screen with HC8357C). The use of the RP2040 PIO makes it easy to change the write cycle timing for different displays. DMA with 16 bit transfers is also supported.
 
@@ -6,13 +6,13 @@ A ["Discussions"](https://github.com/Bodmer/TFT_eSPI/discussions) facility has b
 
 3. Support for the ESP32-S2, ESP32-S3 and ESP32-C3 has been added (DMA not supported at the moment). Tested with v2.0.3 RC1 of the ESP32 board package. Example setups:
 
-      [Setup70_ESP32_S2_ILI9341.h](https://github.com/Bodmer/TFT_eSPI/blob/master/User_Setups/Setup70_ESP32_S2_ILI9341.h)
+      [Setup70_ESP32_S2_ILI9341.h](https://github.com/import-tiago/TFT_eSPI/blob/master/User_Setups/Setup70_ESP32_S2_ILI9341.h)
       
-      [Setup70b_ESP32_S3_ILI9341.h](https://github.com/Bodmer/TFT_eSPI/blob/master/User_Setups/Setup70b_ESP32_S3_ILI9341.h)
+      [Setup70b_ESP32_S3_ILI9341.h](https://github.com/import-tiago/TFT_eSPI/blob/master/User_Setups/Setup70b_ESP32_S3_ILI9341.h)
       
-      [Setup70c_ESP32_C3_ILI9341.h](https://github.com/Bodmer/TFT_eSPI/blob/master/User_Setups/Setup70c_ESP32_C3_ILI9341.h)
+      [Setup70c_ESP32_C3_ILI9341.h](https://github.com/import-tiago/TFT_eSPI/blob/master/User_Setups/Setup70c_ESP32_C3_ILI9341.h)
 
-      [Setup70d_ILI9488_S3_Parallel.h](https://github.com/Bodmer/TFT_eSPI/blob/master/User_Setups/Setup70d_ILI9488_S3_Parallel.h)
+      [Setup70d_ILI9488_S3_Parallel.h](https://github.com/import-tiago/TFT_eSPI/blob/master/User_Setups/Setup70d_ILI9488_S3_Parallel.h)
 
 4. Smooth fonts can now be rendered direct to the TFT with very little flicker for quickly changing values. This is achieved by a line-by-line and block-by-block update of the glyph area without drawing pixels twice. This is a "breaking" change for some sketches because a new true/false parameter is needed to render the background. The default is false if the parameter is missing, Examples:
 
@@ -21,11 +21,11 @@ A ["Discussions"](https://github.com/Bodmer/TFT_eSPI/discussions) facility has b
 
 Note: background rendering for Smooth fonts is also now available when using the print stream e.g. with: tft.println("Hello World");
 
-5. New anti-aliased graphics functions to draw lines, wedge shaped lines, circles and rounded rectangles. [Examples are included](https://github.com/Bodmer/TFT_eSPI/tree/master/examples/Smooth%20Graphics). Examples have also been added to [display PNG compressed images](https://github.com/Bodmer/TFT_eSPI/tree/master/examples/PNG%20Images) (note: requires ~40kbytes RAM).
+5. New anti-aliased graphics functions to draw lines, wedge shaped lines, circles and rounded rectangles. [Examples are included](https://github.com/import-tiago/TFT_eSPI/tree/master/examples/Smooth%20Graphics). Examples have also been added to [display PNG compressed images](https://github.com/import-tiago/TFT_eSPI/tree/master/examples/PNG%20Images) (note: requires ~40kbytes RAM).
 
-6. Frank Boesing has created an extension library for TFT_eSPI that allows a large range of ready-built fonts to be used. Frank's library (adapted to permit rendering in sprites as well as TFT) can be [downloaded here](https://github.com/Bodmer/TFT_eSPI_ext). More than 3300 additional Fonts are [available here](https://github.com/FrankBoesing/fonts/tree/master/ofl). The TFT_eSPI_ext library contains examples that demonstrate the use of the fonts.
+6. Frank Boesing has created an extension library for TFT_eSPI that allows a large range of ready-built fonts to be used. Frank's library (adapted to permit rendering in sprites as well as TFT) can be [downloaded here](https://github.com/import-tiago/TFT_eSPI_ext). More than 3300 additional Fonts are [available here](https://github.com/import-tiago/fonts/tree/master/ofl). The TFT_eSPI_ext library contains examples that demonstrate the use of the fonts.
 
-7. Users of PowerPoint experienced with running macros may be interested in the [pptm sketch generator here](https://github.com/Bodmer/PowerPoint_to_sketch), this converts graphics and tables drawn in PowerPoint slides into an Arduino sketch that renders the graphics on a 480x320 TFT. This is based on VB macros [created by Kris Kasprzak here](https://github.com/KrisKasprzak/Powerpoint-ILI9341_t3).
+7. Users of PowerPoint experienced with running macros may be interested in the [pptm sketch generator here](https://github.com/import-tiago/PowerPoint_to_sketch), this converts graphics and tables drawn in PowerPoint slides into an Arduino sketch that renders the graphics on a 480x320 TFT. This is based on VB macros [created by Kris Kasprzak here](https://github.com/import-tiago/Powerpoint-ILI9341_t3).
 
 8. The library contains two new functions for rectangles filled with a horizontal or vertical coloured gradient:
 
@@ -36,7 +36,7 @@ Note: background rendering for Smooth fonts is also now available when using the
       ![Gradient](https://i.imgur.com/atR0DmP.png)
 
 9. The RP2040 8 bit parallel interface uses the PIO. The PIO now manages the "setWindow" and "block fill" actions, releasing the processor for other tasks when areas of the screen are being filled with a colour. The PIO can optionally be used for SPI interface displays if #define RP2040_PIO_SPI is put in the setup file. Touch screens and pixel read operations are not supported when the PIO interface is used.
-The RP2040 PIO features only work with [Earle Philhower's board package](https://github.com/earlephilhower/arduino-pico), NOT the Arduino Mbed version.
+The RP2040 PIO features only work with [Earle Philhower's board package](https://github.com/import-tiago/arduino-pico), NOT the Arduino Mbed version.
 
 The use of PIO for SPI allows the RP2040 to be over-clocked (up to 250MHz works on my boards) in Earle's board package whilst still maintaining high SPI clock rates.
 
@@ -44,11 +44,11 @@ The use of PIO for SPI allows the RP2040 to be over-clocked (up to 250MHz works 
 
       ["Bouncing circles"](https://www.youtube.com/watch?v=njFXIzCTQ_Q&lc=UgymaUIwOIuihvYh-Qt4AaABAg)
 
-11. The library now supports the Raspberry Pi Pico with both the [official Arduino board package](https://github.com/arduino/ArduinoCore-mbed) and the one provided by [Earle Philhower](https://github.com/earlephilhower/arduino-pico). The setup file "Setup60_RP2040_ILI9341.h" has been used for tests with an ILI9341 display. At the moment only SPI interface displays have been tested. SPI port 0 is the default but SPI port 1 can be specifed in the setup file if those SPI pins are used.
+11. The library now supports the Raspberry Pi Pico with both the [official Arduino board package](https://github.com/import-tiago/ArduinoCore-mbed) and the one provided by [Earle Philhower](https://github.com/import-tiago/arduino-pico). The setup file "Setup60_RP2040_ILI9341.h" has been used for tests with an ILI9341 display. At the moment only SPI interface displays have been tested. SPI port 0 is the default but SPI port 1 can be specifed in the setup file if those SPI pins are used.
 
       ["Rotating cube demo"](https://www.youtube.com/watch?v=4fPxEN9ImVE)
 
-12. The library now provides a "viewport" capability. See "Viewport_Demo" and "Viewport_graphicstest" examples. When a viewport is defined graphics will only appear within that window.  The coordinate datum by default moves to the top left corner of the viewport, but can optionally remain at top left corner of TFT. The GUIslice library will make use of this feature to speed up the rendering of GUI objects ([see #769](https://github.com/Bodmer/TFT_eSPI/issues/769)).
+12. The library now provides a "viewport" capability. See "Viewport_Demo" and "Viewport_graphicstest" examples. When a viewport is defined graphics will only appear within that window.  The coordinate datum by default moves to the top left corner of the viewport, but can optionally remain at top left corner of TFT. The GUIslice library will make use of this feature to speed up the rendering of GUI objects ([see #769](https://github.com/import-tiago/TFT_eSPI/issues/769)).
 
 
 # TFT_eSPI
@@ -180,12 +180,12 @@ IO33 wired to IO34
 
 IO32 wired to IO36
 
-This is an [example setup file](https://github.com/Bodmer/TFT_eSPI/blob/master/User_Setups/Setup14_ILI9341_Parallel.h) with the correct GPIO for this UNO board.
+This is an [example setup file](https://github.com/import-tiago/TFT_eSPI/blob/master/User_Setups/Setup14_ILI9341_Parallel.h) with the correct GPIO for this UNO board.
 
 ![Example](https://i.imgur.com/pUZn6lF.jpg)
 
 If the display board is fitted with a resistance based touch screen then this can be used by performing the modifications described here and the fork of the Adafruit library:
-https://github.com/s60sc/Adafruit_TouchScreen
+https://github.com/import-tiago/Adafruit_TouchScreen
 
 # Tips
 If you load a new copy of TFT_eSPI then it will overwrite your setups if they are kept within the TFT_eSPI folder. One way around this is to create a new folder in your Arduino library folder called "TFT_eSPI_Setups". You then place your custom setup.h files in there. After an upgrade simply edit the User_Setup_Select.h file to point to your custom setup file e.g.:

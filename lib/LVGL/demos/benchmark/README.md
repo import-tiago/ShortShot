@@ -131,4 +131,4 @@ In the first section of the table, "Slow but common cases", those cases are disp
 Below this in the "All cases section" all the results are shown. The < 10 FPS results are shown with red, the >= 10 but < 20 FPS values are displayed with orange.
 
 
-![LVGL benchmark result summary](https://github.com/lvgl/lvgl/tree/master/demos/benchmark/screenshot2.png?raw=true)
+![LVGL benchmark result summary](https://github.com/import-tiago/lvgl/tree/master/demos/benchmark/screenshot2.png?raw=true)

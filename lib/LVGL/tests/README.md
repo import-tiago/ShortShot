@@ -40,7 +40,7 @@ GitHub's CI automatically runs these tests on pushes and pull requests to `maste
 New test needs to be added into the `src/test_cases` folder. The name of the files should look like `test_<name>.c`. The basic skeleton of a test file copy `_test_template.c`.
 
 ### Asserts
-See the list of asserts [here](https://github.com/ThrowTheSwitch/Unity/blob/master/docs/UnityAssertionsReference.md).
+See the list of asserts [here](https://github.com/import-tiago/Unity/blob/master/docs/UnityAssertionsReference.md).
 
 There are some custom, LVGL specific asserts:
 - `TEST_ASSERT_EQUAL_SCREENSHOT("image1.png")` Render the active screen and compare its content with an image in the `ref_imgs` folder.

@@ -2,7 +2,7 @@
 
 bmp2array4bit.py reads a bmp file, and creates C (or C++) code that contains two arrays for adding images to four-bit sprites.  See [Sprite_image_4bit](../../examples/Sprite/Sprite_image_4bit) for an example.
 
-It is loosely based on Spark Fun's bmp2array script, https://github.com/sparkfun/BMPtoArray/blob/master/bmp2array.py.  The bmp file format is documented in https://en.wikipedia.org/wiki/BMP_file_format.
+It is loosely based on Spark Fun's bmp2array script, https://github.com/import-tiago/BMPtoArray/blob/master/bmp2array.py.  The bmp file format is documented in https://en.wikipedia.org/wiki/BMP_file_format.
 
 You'll need python 3.6 (the original uses Python 2.7)
 

@@ -20,9 +20,9 @@ such as OpenGL.
 
 ### `lv_draw_sdl_stack_blur.c`
 
-Contains modified code from [android-stackblur](https://github.com/kikoso/android-stackblur) project.
+Contains modified code from [android-stackblur](https://github.com/import-tiago/android-stackblur) project.
 Apache License 2.0
 
 ### `lv_draw_sdl_lru.c`/`lv_draw_sdl_lru.h`
 
-Contains modified code from [C-LRU-Cache](https://github.com/willcannings/C-LRU-Cache) project. No license defined.
+Contains modified code from [C-LRU-Cache](https://github.com/import-tiago/C-LRU-Cache) project. No license defined.

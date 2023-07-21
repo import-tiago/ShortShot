@@ -45,7 +45,7 @@ LVGL provides everything you need to create an embedded GUI with easy-to-use gra
 * Written in C and compatible with C++
 * Micropython Binding exposes [LVGL API in Micropython](https://blog.lvgl.io/2019-02-20/micropython-bindings)
 * [Simulator](https://docs.lvgl.io/master/get-started/platforms/pc-simulator.html) to develop on PC without embedded hardware
-* 100+ simple [Examples](https://github.com/lvgl/lvgl/tree/master/examples)
+* 100+ simple [Examples](https://github.com/import-tiago/lvgl/tree/master/examples)
 * [Documentation](http://docs.lvgl.io/) and API references online and in PDF
 
 ### Requirements
@@ -99,9 +99,9 @@ Just to mention some platforms:
 - STM32F1, STM32F3, STM32F4, STM32F7, STM32L4, STM32L5, STM32H7
 - Microchip dsPIC33, PIC24, PIC32MX, PIC32MZ
 - [Linux frame buffer](https://blog.lvgl.io/2018-01-03/linux_fb) (/dev/fb)
-- [Raspberry Pi](https://github.com/lvgl/lv_port_linux_frame_buffer)
-- [Espressif ESP32](https://github.com/lvgl/lv_port_esp32)
-- [Infineon Aurix](https://github.com/lvgl/lv_port_aurix)
+- [Raspberry Pi](https://github.com/import-tiago/lv_port_linux_frame_buffer)
+- [Espressif ESP32](https://github.com/import-tiago/lv_port_esp32)
+- [Infineon Aurix](https://github.com/import-tiago/lv_port_aurix)
 - Nordic NRF52 Bluetooth modules
 - Quectel modems
 - [SYNWIT SWM341](http://www.synwit.cn/)
@@ -122,8 +122,8 @@ This list shows the recommended way of learning the library:
 2. Read the [Introduction](https://docs.lvgl.io/master/intro/index.html) page of the documentation (5 minutes)
 3. Get familiar with the basics on the [Quick overview](https://docs.lvgl.io/master/get-started/quick-overview.html) page (15 minutes)
 4. Set up a [Simulator](https://docs.lvgl.io/master/get-started/platforms/pc-simulator.html) (10 minutes)
-5. Try out some [Examples](https://github.com/lvgl/lvgl/tree/master/examples)
-6. Port LVGL to a board. See the [Porting](https://docs.lvgl.io/master/porting/index.html) guide or check the ready to use [Projects](https://github.com/lvgl?q=lv_port_)
+5. Try out some [Examples](https://github.com/import-tiago/lvgl/tree/master/examples)
+6. Port LVGL to a board. See the [Porting](https://docs.lvgl.io/master/porting/index.html) guide or check the ready to use [Projects](https://github.com/import-tiago?q=lv_port_)
 7. Read the [Overview](https://docs.lvgl.io/master/overview/index.html) page to get a better understanding of the library (2-3 hours)
 8. Check the documentation of the [Widgets](https://docs.lvgl.io/master/widgets/index.html) to see their features and usage
 9. If you have questions go to the [Forum](http://forum.lvgl.io/)
@@ -131,9 +131,9 @@ This list shows the recommended way of learning the library:
 
 ## Examples
 
-For more examples see the [examples](https://github.com/lvgl/lvgl/tree/master/examples) folder.
+For more examples see the [examples](https://github.com/import-tiago/lvgl/tree/master/examples) folder.
 
-![LVGL button with label example](https://github.com/lvgl/lvgl/raw/master/docs/misc/btn_example.png)
+![LVGL button with label example](https://github.com/import-tiago/lvgl/raw/master/docs/misc/btn_example.png)
 
 ### C
 ```c
